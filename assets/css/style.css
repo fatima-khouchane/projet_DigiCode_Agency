@@ -23,11 +23,11 @@
   --winter-sky_50: hsla(0, 87%, 53%, 0.5);
   --purple-navy: hsl(236, 26%, 43%);
   --ksu-purple: hsl(239, 54%, 33%);
-  --winter-sky: hsl(0, 87%, 53%);
-  --razzmatazz: hsl(0, 100%, 51%);
+  --winter-sky: hsl(228, 87%, 53%);
+  --razzmatazz: hsl(228, 100%, 51%);
   --platinum: hsl(0, 0%, 90%);
   --black_70: hsla(0, 0%, 0%, 0.7);
-  --rajah: hsl(29, 99%, 67%);
+  --rajah: hsl(50, 99%, 62%);
   --white: hsl(0, 0%, 100%);
 
   --gradient-1: linear-gradient(90deg,var(--royal-blue-dark) 0,var(--ksu-purple) 51%,var(--royal-blue-dark));
@@ -558,13 +558,16 @@ body {
   font-size: 2rem;
   padding: 14px;
   border-radius: var(--radius-4);
-  box-shadow: -3px 3px 15px var(--winter-sky_50);
   z-index: 2;
   visibility: hidden;
   opacity: 0;
   transition: var(--transition-1);
 }
 
+.go-top:hover{
+  box-shadow: -1px 1px 10px #F2A104;
+
+}
 .go-top.active {
   visibility: visible;
   opacity: 1;
@@ -904,7 +907,7 @@ footer .container .contactInfo
     top: 40px;
     width: 350px;
     height: calc(100% - 80px);
-    background:#d62839;
+    background:#adb5bd;
     z-index: 1;
     padding: 40px;
     display: flex;
@@ -1073,7 +1076,7 @@ footer .container .contactForm .formBox .inputBox input:focus ~ span,
     font-size:  12px;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #095a55;
+    color: #5a092f;
     font-weight: 500;
 } 
 
