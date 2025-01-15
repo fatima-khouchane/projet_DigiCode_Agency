@@ -1281,6 +1281,8 @@ footer .container .contactForm .formBox .inputBox input[type="submit"]:hover{
   transform: translate(-50%, -50%) scale(1);
 }
 
+
+/* responsive pop up */
 @media (max-width: 768px) {
   .popup {
     width: 80%; 
