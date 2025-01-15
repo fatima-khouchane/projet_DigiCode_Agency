@@ -1281,33 +1281,32 @@ footer .container .contactForm .formBox .inputBox input[type="submit"]:hover{
   transform: translate(-50%, -50%) scale(1);
 }
 
-/* Requêtes media pour écrans plus petits */
 @media (max-width: 768px) {
   .popup {
-    width: 80%; /* Réduire la largeur */
-    padding: 15px; /* Réduire le padding */
+    width: 80%; 
+    padding: 15px; 
   }
   
   .popup h2 {
-    font-size: 16px; /* Ajuster la taille du texte */
+    font-size: 16px; 
   }
 
   .popup p {
-    font-size: 14px; /* Ajuster la taille du texte */
+    font-size: 14px; 
   }
   
   .popup i {
-    font-size: 30px; /* Réduire la taille de l'icône */
+    font-size: 30px; 
   }
 
   .popup button.closeBtn {
-    padding: 8px 16px; /* Réduire la taille du bouton */
+    padding: 8px 16px; 
   }
 }
 
 @media (max-width: 480px) {
   .popup {
-    width: 90%; /* Plus étroit pour très petits écrans */
+    width: 90%; 
     padding: 10px;
   }
   
