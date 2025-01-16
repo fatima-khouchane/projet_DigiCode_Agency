@@ -314,7 +314,18 @@ body {
   font-size: 4.2rem;
   font-weight: var(--fw-700);
 }
+/* ---------------responsivité de logo ---------------------*/
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.8rem; 
+  }
+}
 
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.6rem;
+  }
+}
 .nav-close-btn {
   color: var(--space-cadet-1);
   font-size: 2.8rem;
