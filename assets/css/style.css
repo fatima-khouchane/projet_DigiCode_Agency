@@ -346,6 +346,36 @@ body {
 }
 
 
+/* add lign for item nav bar
+ */
+.navbar-link {
+  position: relative;
+  color: var(--space-cadet-1);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-600);
+  padding-block: 12px;
+  text-decoration: none; 
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ffa90a; 
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; 
+  background-color: #ffa90a; 
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+  width: 100%; 
+}
 
 
 
@@ -1248,7 +1278,7 @@ footer .container .contactForm .formBox .inputBox input[type="submit"]:hover{
 
 .popup i {
   font-size: 40px;
-  color: #d62839;
+  color: var(--winter-sky);
 }
 
 .popup h2 {
@@ -1265,7 +1295,7 @@ footer .container .contactForm .formBox .inputBox input[type="submit"]:hover{
 
 .popup button.closeBtn {
   padding: 10px 20px;
-  background-color: #d62839;
+  background-color: var(--winter-sky);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -1275,7 +1305,7 @@ footer .container .contactForm .formBox .inputBox input[type="submit"]:hover{
 }
 
 .popup button.closeBtn:hover {
-  background-color: #ef1f1f;
+  background-color:var(--winter-sky);
 }
 
 .open-popup {
