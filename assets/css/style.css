@@ -237,6 +237,12 @@ body {
   #HEADER
 \*-----------------------------------*/
 
+.header .navbar-link {
+  color: #333; 
+}
+.header .logo {
+  color: #333; 
+}
 .header .btn { display: none; }
 
 .header {
@@ -249,6 +255,8 @@ body {
   padding-block: 14px;
   z-index: 4;
   transition: var(--transition-1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 .header.active {
@@ -273,7 +281,7 @@ body {
 }
 
 .nav-open-btn {
-  color: var(--color);
+  color: black;
   font-size: 32px;
   padding: 4px;
 }
@@ -314,7 +322,11 @@ body {
   font-size: 4.2rem;
   font-weight: var(--fw-700);
 }
-/* ---------------responsivité de logo ---------------------*/
+
+/*-----------------------------------*\
+  #responsivité de logo 
+\*-----------------------------------*/
+
 @media (max-width: 768px) {
   .logo {
     font-size: 1.8rem; 
@@ -357,8 +369,12 @@ body {
 }
 
 
-/* add lign for item nav bar
- */
+
+
+ /*-----------------------------------*\
+  #add lign for item nav bar
+\*-----------------------------------*/
+
 .navbar-link {
   position: relative;
   color: var(--space-cadet-1);
@@ -395,9 +411,7 @@ body {
 \*-----------------------------------*/
 
 .hero {
-  background-image: url("../images/hero-bg-bottom.png"),
-                    url("../images/hero-bg.png"),
-                    var(--gradient-1);
+
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: -280px bottom, center, center;
   background-size: auto, cover, auto;
@@ -415,13 +429,13 @@ body {
 }
 
 .hero-title {
-  color: var(--white);
+  color: black;
   font-size: var(--fs-1);
   margin-block-end: 20px;
 }
 
 .hero-text {
-  color: var(--white);
+  color: black;
   font-size: var(--fs-8);
   margin-block-end: 30px;
 }
@@ -453,46 +467,138 @@ body {
   #service
 \*-----------------------------------*/
 
-.features-list > li:first-child { margin-block-end: 30px; }
 
-.features-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
+
+
+/* card service */
+.services {
+    background: #ffffff;
+    min-height: 100vh; 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    padding: 20px 0;
+    color: #434343;
+    font-size: 16px;
 }
 
-.features-card .icon {
-  background-image: var(--gradient-1);
-  background-size: 200%;
-  color: var(--white);
-  min-width: max-content;
-  max-width: max-content;
-  font-size: 36px;
-  padding: 22px;
-  border-radius: 50%;
+main.cards {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    gap: 32px; 
 }
 
-.features-card .icon ion-icon { --ionicon-stroke-width: 20px; }
-
-.features-card .title { margin-block-end: 10px; }
-
-.features-banner { margin-block: 40px; }
-
-.features-banner > img {
-  max-width: max-content;
-  margin-inline: auto;
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    width: calc(33.33% - 32px); 
+    max-width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 
 
+main.cards section.card .icon {
+    width: 64px;
+    height: 64px;
+}
+
+main.cards section.card img {
+    width: 100%;
+}
+
+main.cards section.card h3 {
+    font-size: 1.5rem;
+    margin: 16px 0;
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    flex-grow: 1; 
+    text-align: center;
+}
+
+main.cards section.card button {
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    border-radius: 50px; 
+    border: 2px solid transparent; 
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    width: 200px; 
+    background: linear-gradient(45deg, #0000ee, #adb5bd); 
+    cursor: pointer;
+    outline: none; 
+    transition: transform 0.3s ease, background 0.4s ease, box-shadow 0.3s ease; 
+}
+
+main.cards section.card button:hover {
+    background: linear-gradient(45deg, #ffa90a, #ffe7ba);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-5px); 
+}
+
+main.cards section.card button:active {
+    transform: translateY(2px); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+}
 
 
+main.cards section.card button:active {
+    transform: scale(0.95); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+main.cards section.card:hover {
+    box-shadow: 20px 20px 50px -30px #ffa90a67;
+}
 
 
+@media screen and (max-width: 1024px) {
+    main.cards section.card {
+        width: calc(50% - 32px); 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main.cards section.card {
+        width: 100%; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main.cards {
+        flex-direction: column; 
+    }
+
+    main.cards section.card {
+        width: 90%; 
+        margin-bottom: 20px;
+    }
+
+    main.cards section.card button {
+        font-size: 0.8rem; 
+    }
+}
 
 
-
-
+ 
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
@@ -1372,4 +1478,227 @@ footer .container .contactForm .formBox .inputBox input[type="submit"]:hover{
     padding: 6px 12px;
     font-size: 14px;
   }
+}
+
+
+
+
+/* detail -------------------------------------*/
+
+/* Styles généraux */
+
+
+/* En-tête */
+
+
+/* Section détails ___________________________________*/
+/* Section détails */
+/* Conteneur principal de la section */
+.service-detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 50px auto;
+  background: white;
+  padding: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+/* Contenu du service */
+.service-content {
+  flex: 1 1 50%; 
+  max-width: 50%; 
+  padding: 20px;
+}
+
+.service-content h2 {
+  color: #1f2470;
+  font-size: 2.5rem;
+}
+
+.service-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.service-content ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.service-content ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.service-content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1ec95d;
+  font-weight: bold;
+}
+
+/* Bouton contact */
+.btn-contact {
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #0000ee, #b0b5f9);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-contact:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(65, 125, 255, 0.4);
+}
+
+/* Image */
+.service-image {
+  flex: 1 1 50%; 
+  max-width: 50%; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden;
+}
+
+.service-image img {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  object-fit: cover; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-detail {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .service-content,
+  .service-image {
+    flex-basis: 100%; 
+    max-width: 100%;
+  }
+
+  .service-content h2 {
+    font-size: 2rem;
+  }
+
+  .service-image img {
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/*-----------------------------------*\
+  #animation with js css
+\*-----------------------------------*/
+
+
+/* animation de l'acceuil---------------------------------------- */
+.hero-content, .hero-banner {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero-content.visible, .hero-banner.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* animation de about --------------------------------------------------- */
+.about-content, .about-banner {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-content.visible, .about-banner.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+/* animation au etaill---------------------------------------------- */
+
+.service-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+h2, h3 {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+ul li {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.btn-contact {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation de l'image de detail----------------------------*/
+.service-image {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* animation sercie ---------------------------- */
+.card, .section-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card.animated, .section-title.animated {
+  opacity: 1;
+  transform: translateY(0);
 }

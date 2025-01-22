@@ -88,3 +88,91 @@ function validateForm(event) {
   openPopup();
   return true; 
 }
+
+
+/*-----------------------------------*\
+  #animation js css
+\*-----------------------------------*/
+
+
+// animation de l'acceuil--------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.querySelector(".hero-content").classList.add("visible");
+  }, 500); 
+
+  setTimeout(() => {
+    document.querySelector(".hero-banner").classList.add("visible");
+  }, 1000); 
+});
+
+const heroObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.querySelector(".hero-content").classList.add("visible");
+        entry.target.querySelector(".hero-banner").classList.add("visible");
+      }
+    });
+  },
+  {
+    threshold: 0.5, 
+  }
+);
+
+const heroSection = document.querySelector("#acceuil");
+heroObserver.observe(heroSection);
+
+
+
+
+
+// animation de about---------------------------------
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.querySelector(".about-content").classList.add("visible");
+        entry.target.querySelector(".about-banner").classList.add("visible");
+      }
+    });
+  },
+  {
+    threshold: 0.5, 
+  }
+);
+
+const aboutSection = document.querySelector("#about");
+observer.observe(aboutSection);
+
+
+
+
+
+
+
+
+
+// animation service -------------------------------
+const animateOnScroll = () => {
+  const elements = document.querySelectorAll('.card, .section-title'); 
+
+  elements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementTop < windowHeight - 150) {
+      element.classList.add('animated');
+    } else {
+      element.classList.remove('animated');
+    }
+  });
+};
+
+window.addEventListener('scroll', animateOnScroll);
+
+document.addEventListener('DOMContentLoaded', animateOnScroll);
+
+
+
