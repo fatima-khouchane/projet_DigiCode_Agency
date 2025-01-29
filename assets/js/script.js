@@ -8,7 +8,7 @@ const navbar = document.querySelector("[data-navbar]");
 const navCloseBtn = document.querySelector("[data-nav-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 const prevButton = document.querySelector(".prev"); 
-
+const contactRes = document.querySelector(".contactRes"); 
 const elemArr = [navCloseBtn, overlay, navOpenBtn];
 
 for (let i = 0; i < elemArr.length; i++) {
@@ -17,11 +17,13 @@ for (let i = 0; i < elemArr.length; i++) {
     overlay.classList.toggle("active");
 
     // Gérer la visibilité du bouton prev
-    if (navbar.classList.contains("active")) {
-      prevButton.style.visibility = "hidden"; 
-    } else {
-      prevButton.style.visibility = "visible"; 
-    }
+  if (navbar.classList.contains("active")) {
+    prevButton.style.visibility = "hidden";
+    contactRes.style.display = "block"; // Correction ici
+  } else {
+    prevButton.style.visibility = "visible";
+    contactRes.style.display = "none"; // Masquer le bouton si le menu se ferme
+  }
   });
 }
 
